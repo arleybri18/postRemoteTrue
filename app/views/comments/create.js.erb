@@ -1,0 +1,5 @@
+if (<%= @errors != nil %>){
+    alert("No puedes insertar comentario en blanco")
+} else{
+    $('ul').append('<li><%= j @comment.description%></li>')
+}

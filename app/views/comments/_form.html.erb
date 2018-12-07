@@ -1,0 +1,10 @@
+<%=form_for [@post, @comment], remote: true do |f|%>
+  <%=f.label :description%>
+  <%= f.text_area :description%>
+  <%= f.submit%>
+  
+<%end%>
+<!--Remote true siempre va a buscar un js que se llame de acuerdo al metodo que este en el controlador
+en este caso se ira a buscar la ruta del formulario post/:post_id/comments metodo post, esta ruta lleva 
+al metodo create del controlador comments, el cual por defecto buscara una vista create, entonces 
+renderizara create.js.erb-->
